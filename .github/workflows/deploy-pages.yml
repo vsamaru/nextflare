@@ -11,4 +11,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages publish --project-name=nextflare-demo
+          command: pages publish --project-name=nnx
