@@ -1,0 +1,18 @@
+{
+  "include": ["./src"],
+  "exclude": ["dist", "build", "node_modules", ".pages"],
+  "compilerOptions": {
+    "module": "ESNext",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "target": "ESNext",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+  },
+  
+  "ts-node": {
+      "esm": true,
+  }
+}

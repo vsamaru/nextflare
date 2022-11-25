@@ -1,0 +1,45 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "vercel-build": "next build --debug",
+    "build": "pnpm run next:build && pnpm run pages:build",
+    "dev": "next dev",
+    "next:build": "next build",
+    "dev:pages": "(cd .pages && pnpm wrangler pages dev . --port 9003)",
+    "lint": "next lint",
+    "pages:build": "nextflare build",
+    "pages:deploy": "pnpm wrangler pages publish ./dist --project-name=nextflare-demo",
+    "pages:dev": "pnpm wrangler pages dev ./dist --compatibility-date=2022-08-04 --compatibility-flag=streams_enable_constructors"
+  },
+  "dependencies": {
+    "@cfpreview/vercel-to-pages": "^0.0.1",
+    "@vercel/next": "^3.1.22",
+    "next": "12.3.2-canary.16",
+    "react": "18.3.0-next-20a257c25-20220929",
+    "react-dom": "18.3.0-next-20a257c25-20220929",
+    "ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@next/swc-linux-x64-gnu": "^11.1.2",
+    "@tailwindcss/typography": "^0.5.4",
+    "@types/node": "^18.7.6",
+    "@types/react": "18.0.17",
+    "autoprefixer": "^10.4.8",
+    "eslint": "8.22.0",
+    "eslint-config-custom": "workspace:*",
+    "next-transpile-modules": "9.0.0",
+    "nextflare": "workspace:*",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
+    "ts-loader": "^9.3.1",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.7.4",
+    "vercel": "^28.1.0",
+    "webpack": "5",
+    "webpack-deduplication-plugin": "^0.0.8",
+    "wrangler": "0.0.0-f29fead3"
+  }
+}

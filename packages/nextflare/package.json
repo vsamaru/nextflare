@@ -1,0 +1,46 @@
+{
+  "name": "nextflare",
+  "version": "0.0.1",
+  "description": "",
+  "bin": {
+    "nextflare": "./dist/cli.js"
+  },
+  "files": [
+    "./dist/cli.js",
+    "./dist/webpack.js"
+  ],
+  "scripts": {
+    "lint": "pnpm eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node -r @swc-node/register ./build.ts",
+    "dev": "pnpm build dev"
+  },
+  "type": "commonjs",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "@types/fs-extra": "^9.0.13",
+    "@vercel/next": "^3.1.22",
+    "chalk": "^5.0.1",
+    "esbuild": "^0.15.5",
+    "fs-extra": "^10.1.0",
+    "minimist": "^1.2.6",
+    "next": "canary",
+    "source-map": "^0.7.4",
+    "vercel": "^28.2.0",
+    "webpack": "^5.74.0",
+    "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.14.1",
+    "@swc-node/register": "^1.5.1",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.7.13",
+    "@types/yargs": "^17.0.11",
+    "tsx": "^3.8.2"
+  }
+}
