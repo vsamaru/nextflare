@@ -10,7 +10,7 @@
     "dev:pages": "(cd .pages && pnpm wrangler pages dev . --port 9003)",
     "lint": "next lint",
     "pages:build": "nextflare build",
-    "pages:deploy": "pnpm wrangler pages publish ./dist --project-name=nnx",
+    "pages:deploy": "npx wrangler pages publish ./dist --project-name=nnx",
     "pages:dev": "pnpm wrangler pages dev ./dist --compatibility-date=2022-08-04 --compatibility-flag=streams_enable_constructors"
   },
   "dependencies": {
